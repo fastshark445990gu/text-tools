@@ -1,40 +1,38 @@
 # text-tools
 
-A small collection of command-line utilities I use to clean, inspect, and transform plain text.
+A small personal collection of command-line utilities for everyday text cleanup and transformation.
 
 ## Features
 
 - Normalize whitespace and line endings
-- Remove duplicate or empty lines
-- Sort lines alphabetically or by length
+- Change text case
+- Sort and deduplicate lines
 - Count words, characters, and lines
-- Convert text to lowercase, uppercase, title case, or slug format
-- Read from files or standard input for easy shell pipelines
+- Find and replace text with regular expressions
+- Read from files or standard input
 
 ## Install
 
-Requires Python 3.10 or newer.
-
-    git clone https://github.com/your-username/text-tools.git
-    cd text-tools
-    python -m pip install .
+```bash
+git clone https://github.com/your-username/text-tools.git
+cd text-tools
+npm install
+npm link
+```
 
 ## Usage
 
-Clean a file and write the result to standard output:
+```bash
+text-tools <command> [options] [file]
+```
 
-    text-tools clean notes.txt
+Examples:
 
-Remove duplicate lines and save the result:
+```bash
+text-tools count notes.txt
+text-tools dedupe names.txt
+cat draft.txt | text-tools normalize
+text-tools replace "old" "new" document.txt
+```
 
-    text-tools dedupe input.txt > output.txt
-
-Pipe text between commands:
-
-    cat draft.txt | text-tools slug
-
-List all commands and options:
-
-    text-tools --help
-
-Built for the repetitive text chores that were too small for a script but too common to keep doing by hand.
+Run `text-tools --help` to see all commands and options.
