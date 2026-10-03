@@ -1,38 +1,23 @@
 # text-tools
 
-A small personal collection of command-line utilities for everyday text cleanup and transformation.
+A small collection of Python utilities for everyday development tasks.
 
 ## Features
 
-- Normalize whitespace and line endings
-- Change text case
-- Sort and deduplicate lines
-- Count words, characters, and lines
-- Find and replace text with regular expressions
-- Read from files or standard input
+- Clean, dependency-free helpers
+- Type hints and docstrings
+- Simple command line entry points
+- Works on Python 3.9+
 
 ## Install
 
-```bash
-git clone https://github.com/your-username/text-tools.git
-cd text-tools
-npm install
-npm link
-```
+    pip install -r requirements.txt
 
 ## Usage
 
-```bash
-text-tools <command> [options] [file]
-```
+    from utils import slugify, chunk
+    print(slugify('Hello World'))
 
-Examples:
+## License
 
-```bash
-text-tools count notes.txt
-text-tools dedupe names.txt
-cat draft.txt | text-tools normalize
-text-tools replace "old" "new" document.txt
-```
-
-Run `text-tools --help` to see all commands and options.
+MIT
